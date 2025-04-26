@@ -1,0 +1,77 @@
+# Introduction
+
+This document will act as the first step in the planning stage. 
+A high level view of the problems the project faces.
+
+# The Project
+
+This program will be designed to simulate a game of rock, paper, scissors between a human user and a computer.
+It will also keep scores, and complete the game after 5 rounds.
+
+Below is a list of vital functions we will need for the project
+
+1. A function that can generate 3 random items. 
+    (This will be how the computer makes it's moves)
+
+2. Input for our users so they can make their moves
+
+3. A function that can determine who won the round (Rock beats Scissors etc...).
+
+4. A function that keeps scores for both players.
+
+5. A function that that ends the game after 5 rounds.
+
+Next we will look a little deeper at each step to determine how we can better implement them.
+
+## Step 1
+
+First step is to create a function that can randomly switch between 3 strings.
+To do this we will need to use a random number generator, 
+then assign each number to a string (2 = "Scissors" etc...).
+Finally storing the result in a variable to be used for other functions.
+
+## Step 2
+
+Inputting the user data should be the easiest part of this project.
+All we need to do is create variable that stores user input. (We will be assuming that the user always inputs the correct data, meaning we do not have too account for errors). But we do have to make sure the input is NOT case sensitive, which can easily be achieved with string methods.
+
+## Step 3 And Step 4
+
+To figure out who won the round we must know all the different combinations that can be produced for example (Paper beats Rock and Scissors beats Paper) this can be achieved using if/else statements.
+For example:
+if human = Scissors and computer = paper
+    print: Scissors beats paper!
+    add one point to human score
+else if human = Rock and computer = Paper
+    print: Paper beats Rock!
+    add one point to computers score
+
+etc...
+etc...
+etc...
+
+This approach is probably not the quickest or the most readable.
+
+Another approach could be to use comparison operators (Scissors > Paper, Scissors === Scissors, etc...).
+For this to work I would need to establish the comparisons then find a way to link those comparisons to the moves of the players. As of now I don't know the answer to this riddle.
+
+This approach will be more readable and save time coding but will take me longer to solve
+
+Both Step 3 and 4 will work together, when a decision has been made to who has won the value returned from the decision will be 1 point to the winner, meaning Step 4 is naturally the end result of Step 3 and will share the same function 
+
+## Step 5
+
+This step will turn the matches into a game of 5 rounds. scores will be counted and the highest score after 5 rounds wins.
+
+I would like to implement this using a counter that is triggered once it has been added to 5 times and then declares the winner of the game and resets the game back to zero.
+
+# Conclusion
+
+This plan seems like a solid starting point, sure it doesn't completely cover the entire scope but it is a great starting point. Moving forward I will tackle each function individually, using the system below:
+
+- Write Pseudo code for the function
+- Write the code
+- Test and Debug the code
+
+Once all the steps are complete I will move on to the next function and repeat the process.
+
