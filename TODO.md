@@ -94,3 +94,9 @@ This is turning out to be tricky. I am wondering if the problem lies in my conso
 #### FIX
 
 Okay we got it!! it was not the console.log. It was failing because we were trying to declare the the increment after the return statement. Rookie mistake :p
+
+### BUG: FOR loop repeating same choices
+
+When i run the loop it sticks to the first decision and loops without changing each time.
+
+So the problem is when a value is assigned it keeps the value till the loop is finished. I need to find a way to make the value reset on each iteration

@@ -140,14 +140,12 @@ function playGame() {
     
     getHumanChoice();
     getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(playRound());
+    console.log(playRound(humanSelection, computerSelection));
     console.log("computerSelection: " + computerSelection);
     console.log("humanSelection: " + humanSelection);
     console.log("Computer's score: " + computerScore);
     console.log("Human Score: " + humanScore);
     console.log("Round: " + i);
-    
     }
 }
 playGame();
