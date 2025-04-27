@@ -79,3 +79,7 @@ This plan seems like a solid starting point, sure it doesn't completely cover th
 
 Once all the steps are complete I will move on to the next function and repeat the process.
 
+## Debugging
+
+I am adding a debugging section to this doc to help me mentally work through bugs I encounter.
+
