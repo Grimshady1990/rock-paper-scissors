@@ -9,7 +9,8 @@ function getComputerChoice() {
 // ADD a variable that accepts 3 random numbers
 let num = Math.floor(Math.random() * 3);
 // ASSIGN string values to the numbers
-if (num === 1) {
+/* if (num === 1) {
+
     return "Scissors"
 }
 if (num === 2) {
@@ -22,7 +23,23 @@ if (num === 0) {
 // RETURN the results
     return num
 
+} */
+/* The code below achieves the same results
+   as the one commented out above but is more 
+   readable  */
+if (num === 1) {
+    return "SCISSORS"
 }
+else if (num === 2) {
+    return "PAPER"
+} else {
+    return "ROCK"
+}
+
+return num
+
+}
+
 // PRINT results
 console.log(getComputerChoice());
 
