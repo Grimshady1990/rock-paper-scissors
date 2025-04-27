@@ -126,6 +126,19 @@ playRound(humanSelection, computerSelection);
 console.log("Computer's score: " + computerScore);
 console.log("Human Score: " + humanScore);
 
+/* -----------STEP 5----------- 
+   -----Logic to play the------
+   --------entire game--------- */
+
+// CREATE a function
+
+// CREATE a for loop
+
+// FOR integer greater than 5 end game
+
+// LOOP entire game using the functions
+
+// Increment a counter ever time playRound is called 
 
 
 
