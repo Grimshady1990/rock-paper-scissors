@@ -28,20 +28,19 @@ if (num === 0) {
    as the one commented out above but is more 
    readable  */
 if (num === 1) {
-    return "SCISSORS"
+    return "SCISSORS";
 }
 else if (num === 2) {
-    return "PAPER"
+    return "PAPER";
 } else {
-    return "ROCK"
+    return "ROCK";
 }
 
-return num;
 
 }
 
 // PRINT results
-console.log(getComputerChoice());
+//console.log(getComputerChoice());
 
 /* ----------STEP 2---------------
    -----Create input for----------
@@ -57,6 +56,7 @@ let choice = prompt("ROCK, PAPER, or SCISSORS");
 let result = choice.toUpperCase();
 
 // RETURN the results
+//return result;
 return result;
 
 }
@@ -80,13 +80,15 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
 
 // CREATE comparisons between choices to determine a winner
-    if (humanChoice === "SCISSORS" && computerChoice === "ROCK") {
+    if (computerSelection === "SCISSORS" && humanSelection === "PAPER") {
 
         // RETURN win or lose message
-        console.log("You Lose! Rock beats Scissors");
+        return console.log("You Lose! Scissors beats Paper");
 
         // ADD score to winner
         computerScore++;
+    } else {
+        return console.log("Error");
     }
 }
 
@@ -95,6 +97,9 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 // CALL function
+
+console.log("computerSelection: " + computerSelection);
+console.log("humanSelection: " + humanSelection);
 playRound(humanSelection, computerSelection);
 
 
