@@ -62,7 +62,7 @@ return result;
 }
 
 // PRINT results
-console.log(getHumanChoice());
+//console.log(getHumanChoice());
 
 /* ------------STEP 3-------------
    -----Add global variables------
