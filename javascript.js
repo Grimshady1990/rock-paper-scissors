@@ -65,5 +65,10 @@ return result;
 console.log(getHumanChoice());
 
 /* ------------STEP 3-------------
-   --------- */
+   -----Add global variables------
+   -------for both players-------- */
+
+// CREATE two variables that initiate at zero
+let humanScore = 0;
+let computerScore = 0;
 
