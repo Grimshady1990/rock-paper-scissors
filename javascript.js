@@ -96,4 +96,5 @@ const computerSelection = getComputerChoice();
 
 // CALL function
 playRound(humanSelection, computerSelection);
+console.log(playRound);
 
