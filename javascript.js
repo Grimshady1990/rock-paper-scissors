@@ -88,7 +88,7 @@ function playRound(humanChoice, computerChoice) {
             computerScore++;
 
             // RETURN win or lose message
-            return console.log("You Lose!");
+            return "You Lose!";
 
         
         
@@ -99,13 +99,13 @@ function playRound(humanChoice, computerChoice) {
              (humanSelection === "ROCK" && computerSelection === "SCISSORS")) {
                 
                 humanScore++;
-                return console.log("You Win!")
+                return "You Win!";
              }
     else if (humanSelection === computerSelection) {
-        return console.log("Its a draw!");
+        return "Its a draw!";
     }
     else {
-        return console.log("Error");
+        return "Error";
     }
 }
 
@@ -116,29 +116,38 @@ const computerSelection = getComputerChoice();
 
 
 // TEST if values are being caught
-console.log("computerSelection: " + computerSelection);
-console.log("humanSelection: " + humanSelection);
+//console.log("computerSelection: " + computerSelection);
+//console.log("humanSelection: " + humanSelection);
 
 // CALL function
-playRound(humanSelection, computerSelection);
+//playRound(humanSelection, computerSelection);
 
 // TEST if score is being updated
-console.log("Computer's score: " + computerScore);
-console.log("Human Score: " + humanScore);
+//console.log("Computer's score: " + computerScore);
+//console.log("Human Score: " + humanScore);
 
 /* -----------STEP 5----------- 
    -----Logic to play the------
    --------entire game--------- */
 
 // CREATE a function
+function playGame() {
 
-// CREATE a for loop
-
-// FOR integer greater than 5 end game
-
+// CREATE a for loop FOR integer greater than 5 end game
+// Increment a counter ever time playRound is called
+    for (let i = 1; i <= 5; i++) {
 // LOOP entire game using the functions
-
-// Increment a counter ever time playRound is called 
+    getHumanChoice()
+    getComputerChoice()
+    playRound(humanSelection, computerSelection);
+    console.log("computerSelection: " + computerSelection);
+    console.log("humanSelection: " + humanSelection);
+    console.log("Computer's score: " + computerScore);
+    console.log("Human Score: " + humanScore);
+    console.log("Round: " + i);
+    }
+}
+playGame();
 
 
 
