@@ -72,3 +72,28 @@ console.log(getHumanChoice());
 let humanScore = 0;
 let computerScore = 0;
 
+/* ------------STEP 4-------------
+   ------Add logic to play--------
+   -------a single round---------- */
+
+// CREATE a function with 2 parameters
+function playRound(humanChoice, computerChoice) {
+
+// CREATE comparisons between choices to determine a winner
+    if (humanSelection === "SCISSORS" && computerSelection === "ROCK") {
+
+        // RETURN win or lose message
+        return "You Lose! Rock beats Scissors";
+
+        // ADD score to winner
+        computerScore++;
+    }
+}
+
+// CREATE variables that store the players choice functions
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+// CALL function
+playRound(humanSelection, computerSelection);
+
