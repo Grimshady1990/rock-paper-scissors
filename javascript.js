@@ -36,7 +36,6 @@ else if (num === 2) {
     return "ROCK";
 }
 
-
 }
 
 // PRINT results
@@ -146,9 +145,11 @@ function playGame() {
     console.log("Computer's score: " + computerScore);
     console.log("Human Score: " + humanScore);
     console.log("Round: " + i);
+    
     }
 }
 playGame();
 
+//TEST reset function
 
 
