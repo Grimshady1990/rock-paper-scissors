@@ -100,8 +100,10 @@ const computerSelection = getComputerChoice();
 
 // CALL function
 
+// TEST if values are being caught
 console.log("computerSelection: " + computerSelection);
 console.log("humanSelection: " + humanSelection);
+
 playRound(humanSelection, computerSelection);
 
 
