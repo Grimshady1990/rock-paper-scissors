@@ -109,8 +109,8 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // CREATE variables that store the players choice functions
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
 
 
 
@@ -129,6 +129,13 @@ const computerSelection = getComputerChoice();
    -----Logic to play the------
    --------entire game--------- */
 
+//TEST reset function
+
+function resetChoice() {
+    delete humanSelection;
+    humanSelection = getHumanChoice();
+}
+
 // CREATE a function
 function playGame() {
 
@@ -145,11 +152,10 @@ function playGame() {
     console.log("Computer's score: " + computerScore);
     console.log("Human Score: " + humanScore);
     console.log("Round: " + i);
+    resetChoice();
     
     }
 }
 playGame();
-
-//TEST reset function
 
 

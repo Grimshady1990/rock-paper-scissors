@@ -99,4 +99,6 @@ Okay we got it!! it was not the console.log. It was failing because we were tryi
 
 When i run the loop it sticks to the first decision and loops without changing each time.
 
-So the problem is when a value is assigned it keeps the value till the loop is finished. I need to find a way to make the value reset on each iteration
+So the problem is when a value is assigned it keeps the value till the loop is finished. I need to find a way to make the value reset on each iteration.
+
+Okay we are on the right track We created a function that deletes the variable humanSelection and then reassigns to the getHumanChoice() which resets the variable.
