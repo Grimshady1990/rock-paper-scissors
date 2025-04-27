@@ -83,7 +83,7 @@ function playRound(humanChoice, computerChoice) {
     if (humanSelection === "SCISSORS" && computerSelection === "ROCK") {
 
         // RETURN win or lose message
-        return "You Lose! Rock beats Scissors";
+        console.log("You Lose! Rock beats Scissors");
 
         // ADD score to winner
         computerScore++;
@@ -96,5 +96,5 @@ const computerSelection = getComputerChoice();
 
 // CALL function
 playRound(humanSelection, computerSelection);
-console.log(playRound);
+
 
