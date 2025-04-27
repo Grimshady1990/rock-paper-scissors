@@ -83,12 +83,13 @@ function playRound(humanChoice, computerChoice) {
     if ((computerSelection === "SCISSORS" && humanSelection === "PAPER") || 
         (computerSelection === "PAPER" && humanSelection === "ROCK") || 
         (computerSelection === "ROCK" && humanSelection === "SCISSORS")) {
-
+        
+            computerScore++;    
         // RETURN win or lose message
-        return console.log("You Lose!");
+            return console.log("You Lose!");
 
         // ADD score to winner
-        computerScore++;
+        
     } else {
         return console.log("Error");
     }
@@ -98,12 +99,18 @@ function playRound(humanChoice, computerChoice) {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-// CALL function
+
 
 // TEST if values are being caught
 console.log("computerSelection: " + computerSelection);
 console.log("humanSelection: " + humanSelection);
 
+// CALL function
 playRound(humanSelection, computerSelection);
+
+// TEST if score is being updated
+console.log("Computer's score: " + computerScore);
+
+
 
 

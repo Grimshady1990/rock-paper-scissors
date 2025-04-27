@@ -83,3 +83,14 @@ Once all the steps are complete I will move on to the next function and repeat t
 
 I am adding a debugging section to this doc to help me mentally work through bugs I encounter.
 
+### BUG: computerScore NOT updating
+
+the computer score is not updating for some reason. My first guess is it is being updated after it has been announced I will google to see how I can change that. 
+
+Okay so this is not the problem it seems that that the value is not being updated at all. Next I will check how to increment when inside a if statement.
+
+This is turning out to be tricky. I am wondering if the problem lies in my console.log returns which were the cause of my last bug.
+
+#### FIX
+
+Okay we got it!! it was not the console.log. It was failing because we were trying to declare the the increment after the return statement. Rookie mistake :p
