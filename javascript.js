@@ -78,7 +78,7 @@ let computerScore = 0;
 
 // CREATE a function with 2 parameters
 function playRound(humanChoice, computerChoice) {
-
+    
 // CREATE comparisons between choices to determine a winner
     if ((computerSelection === "SCISSORS" && humanSelection === "PAPER") || 
         (computerSelection === "PAPER" && humanSelection === "ROCK") || 
@@ -137,14 +137,17 @@ function playGame() {
 // Increment a counter ever time playRound is called
     for (let i = 1; i <= 5; i++) {
 // LOOP entire game using the functions
-    getHumanChoice()
-    getComputerChoice()
+    
+    getHumanChoice();
+    getComputerChoice();
     playRound(humanSelection, computerSelection);
+    console.log(playRound());
     console.log("computerSelection: " + computerSelection);
     console.log("humanSelection: " + humanSelection);
     console.log("Computer's score: " + computerScore);
     console.log("Human Score: " + humanScore);
     console.log("Round: " + i);
+    
     }
 }
 playGame();
