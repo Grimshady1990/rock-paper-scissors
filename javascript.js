@@ -64,3 +64,6 @@ return result;
 // PRINT results
 console.log(getHumanChoice());
 
+/* ------------STEP 3-------------
+   --------- */
+

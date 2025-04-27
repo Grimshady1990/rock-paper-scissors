@@ -15,9 +15,9 @@ Below is a list of vital functions we will need for the project
 
 2. Input for our users so they can make their moves
 
-3. A function that can determine who won the round (Rock beats Scissors etc...).
+3. Create global variables that keep score
 
-4. A function that keeps scores for both players.
+4. A function that can determine who won the round (Rock beats Scissors etc...), And add there scores to global variables
 
 5. A function that that ends the game after 5 rounds.
 
@@ -35,7 +35,11 @@ Finally storing the result in a variable to be used for other functions.
 Inputting the user data should be the easiest part of this project.
 All we need to do is create variable that stores user input. (We will be assuming that the user always inputs the correct data, meaning we do not have too account for errors). But we do have to make sure the input is NOT case sensitive, which can easily be achieved with string methods.
 
-## Step 3 And Step 4
+## Step 3
+
+Create 2 global variables that will keep scores for both players
+
+## Step 4
 
 To figure out who won the round we must know all the different combinations that can be produced for example (Paper beats Rock and Scissors beats Paper) this can be achieved using if/else statements.
 For example:
@@ -57,7 +61,7 @@ For this to work I would need to establish the comparisons then find a way to li
 
 This approach will be more readable and save time coding but will take me longer to solve
 
-Both Step 3 and 4 will work together, when a decision has been made to who has won the value returned from the decision will be 1 point to the winner, meaning Step 4 is naturally the end result of Step 3 and will share the same function 
+And finally add one point to the global variable attached to the winner
 
 ## Step 5
 
