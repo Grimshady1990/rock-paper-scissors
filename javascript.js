@@ -48,12 +48,17 @@ console.log(getComputerChoice());
    -------a human user------------ */
 
 // CREATE function 
-
+function getHumanChoice() {
 // CREATE a variable that accepts external input
+let choice = prompt("ROCK, PAPER, or SCISSORS");
 
 // CREATE a method that makes all characters uppercase
-
+let result = choice.toUpperCase();
 // RETURN the results
+return result;
+
+}
 
 // PRINT results
+console.log(getHumanChoice());
 
