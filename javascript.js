@@ -23,6 +23,20 @@ if (num === 0) {
     return num
 
 }
-
+// PRINT results
 console.log(getComputerChoice());
+
+/* ----------STEP 2---------------
+   -----Create input for----------
+   -------a human user------------ */
+
+// CREATE function 
+
+// CREATE a variable that accepts external input
+
+// CREATE a method that makes all characters uppercase
+
+// RETURN the results
+
+// PRINT results
 
