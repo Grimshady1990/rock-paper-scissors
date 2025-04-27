@@ -28,15 +28,15 @@ if (num === 0) {
    as the one commented out above but is more 
    readable  */
 if (num === 1) {
-    return "SCISSORS"
+    return "ROBOT: SCISSORS"
 }
 else if (num === 2) {
-    return "PAPER"
+    return "ROBOT: PAPER"
 } else {
-    return "ROCK"
+    return "ROBOT: ROCK"
 }
 
-return num
+return num;
 
 }
 
@@ -49,11 +49,13 @@ console.log(getComputerChoice());
 
 // CREATE function 
 function getHumanChoice() {
+
 // CREATE a variable that accepts external input
 let choice = prompt("ROCK, PAPER, or SCISSORS");
 
 // CREATE a method that makes all characters uppercase
-let result = choice.toUpperCase();
+let result = "HUMAN: " + choice.toUpperCase();
+
 // RETURN the results
 return result;
 
