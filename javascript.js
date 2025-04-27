@@ -80,10 +80,12 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
 
 // CREATE comparisons between choices to determine a winner
-    if (computerSelection === "SCISSORS" && humanSelection === "PAPER") {
+    if ((computerSelection === "SCISSORS" && humanSelection === "PAPER") || 
+        (computerSelection === "PAPER" && humanSelection === "ROCK") || 
+        (computerSelection === "ROCK" && humanSelection === "SCISSORS")) {
 
         // RETURN win or lose message
-        return console.log("You Lose! Scissors beats Paper");
+        return console.log("You Lose!");
 
         // ADD score to winner
         computerScore++;
