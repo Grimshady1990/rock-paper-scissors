@@ -151,17 +151,18 @@ function playGame() {
     
     humanSelection;
     computerSelection;
-    console.log(playRound(humanSelection, computerSelection));
+    console.log("Round: " + i);
     console.log("computerSelection: " + computerSelection);
     console.log("humanSelection: " + humanSelection);
+    console.log(playRound(humanSelection, computerSelection));
     console.log("Computer's score: " + computerScore);
     console.log("Human Score: " + humanScore);
-    console.log("Round: " + i);
+    
+    
     resetChoice();
     }
     finalRound();
     if (humanScore > computerScore) {
-        finalRound();
         return "You Won The Game!";
     }
     else if (humanScore < computerScore) {
@@ -179,12 +180,13 @@ function finalRound() {
     let lastRound = 5;
     humanSelection;
     computerSelection;
-    console.log(playRound(humanSelection, computerSelection));
+    console.log("Round: " + lastRound);
     console.log("computerSelection: " + computerSelection);
     console.log("humanSelection: " + humanSelection);
+    console.log(playRound(humanSelection, computerSelection));
     console.log("Computer's score: " + computerScore);
     console.log("Human Score: " + humanScore);
-    console.log("Round: " + lastRound);    
+        
 }
 console.log(playGame());
 
