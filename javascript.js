@@ -95,7 +95,7 @@ function playGame() {
     
 // CREATE a for loop:
 // This loop will end after the forth round
-// so the finalRound function and act as the fifth.
+// so the finalRound function can act as the fifth.
     for (let i = 1; i <= 4; i++) {
     
 // LOOP entire round.
