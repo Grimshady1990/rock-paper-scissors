@@ -1,6 +1,6 @@
 ## Debugging
 
-I am adding a debugging section to this document to help me mentally work through bugs I encounter.
+This debugging document is designed to help me mentally work through bugs I encounter.
 
 ### BUG: `computerScore` not updating
 
