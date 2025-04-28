@@ -180,7 +180,7 @@ function playGame() {
         console.log("Human Score: " + humanScore);
         console.log("Round: " + lastRound);
         return "You Lost The Game!";
-    } else {
+    } else if (humanScore === computerScore) {
         humanSelection;
         computerSelection;
         console.log(playRound(humanSelection, computerSelection));
@@ -190,6 +190,8 @@ function playGame() {
         console.log("Human Score: " + humanScore);
         console.log("Round: " + lastRound);
         return "It's a Draw Play Again!";
+    } else {
+        return "ERROR";
     }
 }
 console.log(playGame());
