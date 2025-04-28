@@ -134,6 +134,8 @@ let computerSelection = getComputerChoice();
 function resetChoice() {
     delete humanSelection;
     humanSelection = getHumanChoice();
+    delete computerSelection;
+    computerSelection = getComputerChoice();
 }
 
 // CREATE a function
@@ -144,8 +146,8 @@ function playGame() {
     for (let i = 1; i <= 5; i++) {
 // LOOP entire game using the functions
     
-    getHumanChoice();
-    getComputerChoice();
+    //getHumanChoice();
+    //getComputerChoice();
     console.log(playRound(humanSelection, computerSelection));
     console.log("computerSelection: " + computerSelection);
     console.log("humanSelection: " + humanSelection);
