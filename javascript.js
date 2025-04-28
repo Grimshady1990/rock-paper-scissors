@@ -148,15 +148,23 @@ function playGame() {
     
     //getHumanChoice();
     //getComputerChoice();
-    playRound(humanSelection, computerSelection);
+    resetChoice();
+    console.log(playRound(humanSelection, computerSelection));
     console.log("computerSelection: " + computerSelection);
     console.log("humanSelection: " + humanSelection);
     console.log("Computer's score: " + computerScore);
     console.log("Human Score: " + humanScore);
     console.log("Round: " + i);
-    resetChoice();
+    
     }
-    return "GAME OVER";
+    if (humanScore > computerScore) {
+        return "You Won The Game!";
+    }
+    else if (humanScore < computerScore) {
+        return "You Lost The Game!";
+    } else {
+        return "It's a Draw Play Again!";
+    }
 }
 console.log(playGame());
 
