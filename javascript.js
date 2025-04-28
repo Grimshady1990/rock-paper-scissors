@@ -8,25 +8,8 @@ function getComputerChoice() {
 
 // ADD a variable that accepts 3 random numbers
 let num = Math.floor(Math.random() * 3);
+
 // ASSIGN string values to the numbers
-/* if (num === 1) {
-
-    return "Scissors"
-}
-if (num === 2) {
-    return "Paper"
-}
-if (num === 0) {
-    return "Rock"
-}
-
-// RETURN the results
-    return num
-
-} */
-/* The code below achieves the same results
-   as the one commented out above but is more 
-   readable  */
 if (num === 1) {
     return "SCISSORS";
 }
@@ -37,9 +20,6 @@ else if (num === 2) {
 }
 
 }
-
-// PRINT results
-//console.log(getComputerChoice());
 
 /* ----------STEP 2---------------
    -----Create input for----------
@@ -55,13 +35,8 @@ let choice = prompt("ROCK, PAPER, or SCISSORS");
 let result = choice.toUpperCase();
 
 // RETURN the results
-//return result;
 return result;
-
 }
-
-// PRINT results
-//console.log(getHumanChoice());
 
 /* ------------STEP 3-------------
    -----Add global variables------
@@ -89,18 +64,17 @@ function playRound(humanChoice, computerChoice) {
             // RETURN win or lose message
             return "You Lose!";
 
-        
-        
         // Repeat process for the other scenarios
     }
     else if ((humanSelection === "SCISSORS" && computerSelection === "PAPER") ||
              (humanSelection === "PAPER" && computerSelection === "ROCK") ||
              (humanSelection === "ROCK" && computerSelection === "SCISSORS")) {
                 
-                humanScore++;
-                return "You Win!";
-             }
+        humanScore++;    
+        return "You Win!";
+    }
     else if (humanSelection === computerSelection) {
+                
         return "Its a draw!";
     }
     else {
@@ -112,43 +86,19 @@ function playRound(humanChoice, computerChoice) {
 let humanSelection = getHumanChoice();
 let computerSelection = getComputerChoice();
 
-
-
-// TEST if values are being caught
-//console.log("computerSelection: " + computerSelection);
-//console.log("humanSelection: " + humanSelection);
-
-// CALL function
-//playRound(humanSelection, computerSelection);
-
-// TEST if score is being updated
-//console.log("Computer's score: " + computerScore);
-//console.log("Human Score: " + humanScore);
-
 /* -----------STEP 5----------- 
    -----Logic to play the------
    --------entire game--------- */
 
-//TEST reset function
-
-function resetChoice() {
-    delete humanSelection;
-    humanSelection = getHumanChoice();
-    delete computerSelection;
-    computerSelection = getComputerChoice();
-}
-
 // CREATE a function
 function playGame() {
     
-// CREATE a for loop FOR integer greater than 5 end game
-// Increment a counter ever time playRound is called
+// CREATE a for loop:
+// This loop will end after the forth round
+// so the finalRound function and act as the fifth.
     for (let i = 1; i <= 4; i++) {
-// LOOP entire game using the functions
     
-    //getHumanChoice();
-    //getComputerChoice();
-    
+// LOOP entire round.
     humanSelection;
     computerSelection;
     console.log("Round: " + i);
@@ -157,11 +107,14 @@ function playGame() {
     console.log(playRound(humanSelection, computerSelection));
     console.log("Computer's score: " + computerScore);
     console.log("Human Score: " + humanScore);
-    
-    
     resetChoice();
     }
+
+    // EXIT loop and execute the final round.
+    // This removes bugs made by the loop.
     finalRound();
+
+    // IF/ELSE statements to close the game
     if (humanScore > computerScore) {
         return "You Won The Game!";
     }
@@ -174,8 +127,20 @@ function playGame() {
         return "ERROR";
     }
 }
-// CREATE function for final round to clean up
-// and improve readability
+
+// CREATE reset function:
+// This function resets the variables stored
+// in the players selection so we can achieve 
+// different outcomes each round.
+function resetChoice() {
+    delete humanSelection;
+    humanSelection = getHumanChoice();
+    delete computerSelection;
+    computerSelection = getComputerChoice();
+}
+
+// CREATE function for final round which breaks the
+// loop, and allows the game to end as desired
 function finalRound() {
     let lastRound = 5;
     humanSelection;
@@ -185,9 +150,10 @@ function finalRound() {
     console.log("humanSelection: " + humanSelection);
     console.log(playRound(humanSelection, computerSelection));
     console.log("Computer's score: " + computerScore);
-    console.log("Human Score: " + humanScore);
-        
+    console.log("Human Score: " + humanScore);        
 }
+
+// CALL function to start the game
 console.log(playGame());
 
 
