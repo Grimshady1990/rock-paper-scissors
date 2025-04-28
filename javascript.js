@@ -148,16 +148,16 @@ function playGame() {
     
     //getHumanChoice();
     //getComputerChoice();
-    console.log(playRound(humanSelection, computerSelection));
+    playRound(humanSelection, computerSelection);
     console.log("computerSelection: " + computerSelection);
     console.log("humanSelection: " + humanSelection);
     console.log("Computer's score: " + computerScore);
     console.log("Human Score: " + humanScore);
     console.log("Round: " + i);
     resetChoice();
-    
     }
+    return "GAME OVER";
 }
-playGame();
+console.log(playGame());
 
 
