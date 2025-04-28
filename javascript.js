@@ -159,15 +159,15 @@ function playGame() {
     console.log("Round: " + i);
     resetChoice();
     }
+    finalRound();
     if (humanScore > computerScore) {
         finalRound();
         return "You Won The Game!";
     }
     else if (humanScore < computerScore) {
-        finalRound();
         return "You Lost The Game!";
-    } else if (humanScore === computerScore) {
-        finalRound();
+    } 
+    else if (humanScore === computerScore) {
         return "It's a Draw Play Again!";
     } else {
         return "ERROR";
