@@ -105,4 +105,10 @@ Okay we are on the right track We created a function that deletes the variable h
 
 ### FIX
 
-We fixed the bug by creating a function that deletes the variables value and then resigns it
+We fixed the bug by creating a function that deletes the variables value and then resigns it check the function resetChoice() for more details.
+
+### BUG: resetChoice triggers prompt one extra time
+
+We are at the very end of this project everything is working properly which is great but we have a small problem where the prompt box is being triggered 1 extra time by the resetChoice() function it does not output anything which makes it unique and it only happens the first time its called.
+
+I moved the function from the end of the loop to the start and the extra prompt moved with it confirming that this function call is causing the problem.
