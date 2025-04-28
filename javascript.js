@@ -140,29 +140,55 @@ function resetChoice() {
 
 // CREATE a function
 function playGame() {
-
+    let lastRound = 5;
 // CREATE a for loop FOR integer greater than 5 end game
 // Increment a counter ever time playRound is called
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 4; i++) {
 // LOOP entire game using the functions
     
     //getHumanChoice();
     //getComputerChoice();
-    resetChoice();
+    
+    humanSelection;
+    computerSelection;
     console.log(playRound(humanSelection, computerSelection));
     console.log("computerSelection: " + computerSelection);
     console.log("humanSelection: " + humanSelection);
     console.log("Computer's score: " + computerScore);
     console.log("Human Score: " + humanScore);
     console.log("Round: " + i);
-    
+    resetChoice();
     }
     if (humanScore > computerScore) {
+        humanSelection;
+        computerSelection;
+        console.log(playRound(humanSelection, computerSelection));
+        console.log("computerSelection: " + computerSelection);
+        console.log("humanSelection: " + humanSelection);
+        console.log("Computer's score: " + computerScore);
+        console.log("Human Score: " + humanScore);
+        console.log("Round: " + lastRound);
         return "You Won The Game!";
     }
     else if (humanScore < computerScore) {
+        humanSelection;
+        computerSelection;
+        console.log(playRound(humanSelection, computerSelection));
+        console.log("computerSelection: " + computerSelection);
+        console.log("humanSelection: " + humanSelection);
+        console.log("Computer's score: " + computerScore);
+        console.log("Human Score: " + humanScore);
+        console.log("Round: " + lastRound);
         return "You Lost The Game!";
     } else {
+        humanSelection;
+        computerSelection;
+        console.log(playRound(humanSelection, computerSelection));
+        console.log("computerSelection: " + computerSelection);
+        console.log("humanSelection: " + humanSelection);
+        console.log("Computer's score: " + computerScore);
+        console.log("Human Score: " + humanScore);
+        console.log("Round: " + lastRound);
         return "It's a Draw Play Again!";
     }
 }
