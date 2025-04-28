@@ -114,3 +114,7 @@ We are at the very end of this project everything is working properly which is g
 I moved the function from the end of the loop to the start and the extra prompt moved with it confirming that this function call is causing the problem.
 
 I think the answer to this problem may be to place the prompt feature into its own function. this should stop it from being retriggered.
+
+### FIX
+
+Bug was fixed by trigging the last round in the if statement of playGame() this cancelled out the final resetChoice() that was causing the problem.
