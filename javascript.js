@@ -1,3 +1,5 @@
+let humanScore = 0;
+let computerScore = 0;
 
 const scissors = document.querySelector("#scissors");
 scissors.addEventListener("click", () => {
@@ -17,6 +19,33 @@ const rock = document.querySelector("#rock");
 rock.addEventListener("click", () => {
     playRound("ROCK", getComputerChoice);
 });
+
+const scoreCard = document.createElement("div");
+document.body.appendChild(scoreCard);
+
+const scoreCardTitle = document.createElement("h1");
+scoreCardTitle.textContent = "ScoreCard";
+scoreCard.appendChild(scoreCardTitle);
+
+const scoreList = document.createElement("ul")
+scoreCard.appendChild(scoreList);
+
+const humanItem = document.createElement("li");
+const computerItem = document.createElement("li");
+scoreList.appendChild(humanItem);
+scoreList.appendChild(computerItem);
+
+const humanDetails = document.createElement("span");
+humanDetails.textContent = `Human Score: ${humanScore}`;
+
+const computerDetails = document.createElement("span");
+computerDetails.textContent = `Computer Score ${computerScore}`
+
+
+humanItem.appendChild(humanDetails);
+computerItem.appendChild(computerDetails);
+
+
 
 /* ---------------STEP 1-----------------
    -------Create a computer that--------- 
@@ -63,8 +92,7 @@ function getHumanChoice(choice) {
    -------for both players-------- */
 
 // CREATE two variables that initiate at zero
-let humanScore = 0;
-let computerScore = 0;
+
 
 /* ------------STEP 4-------------
    ------Add logic to play--------
