@@ -83,12 +83,12 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // CREATE variables that store the players choice functions
-let humanSelection = getHumanChoice();
+//let humanSelection = getHumanChoice();
 let computerSelection = getComputerChoice();
 
 /* -----------STEP 5----------- 
    -----Logic to play the------
-   --------entire game--------- */
+   --------entire game--------- 
 
 // CREATE a function
 function playGame() {
@@ -154,6 +154,6 @@ function finalRound() {
 }
 
 // CALL function to start the game
-console.log(playGame());
+console.log(playGame());*/
 
 
