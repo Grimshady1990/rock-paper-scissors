@@ -20,30 +20,6 @@ rock.addEventListener("click", () => {
     playRound("ROCK", getComputerChoice);
 });
 
-const scoreCard = document.createElement("div");
-document.body.appendChild(scoreCard);
-
-const scoreCardTitle = document.createElement("h1");
-scoreCardTitle.textContent = "ScoreCard";
-scoreCard.appendChild(scoreCardTitle);
-
-const scoreList = document.createElement("ul")
-scoreCard.appendChild(scoreList);
-
-const humanItem = document.createElement("li");
-const computerItem = document.createElement("li");
-scoreList.appendChild(humanItem);
-scoreList.appendChild(computerItem);
-
-const humanDetails = document.createElement("span");
-humanDetails.textContent = `Human Score: ${humanScore}`;
-
-const computerDetails = document.createElement("span");
-computerDetails.textContent = `Computer Score ${computerScore}`
-
-
-humanItem.appendChild(humanDetails);
-computerItem.appendChild(computerDetails);
 
 
 
@@ -212,4 +188,30 @@ function playGame() {
 // CALL function to start the game
 console.log(playGame());*/
 
+
+//ScoreCard Elements
+const scoreCard = document.createElement("div");
+document.body.appendChild(scoreCard);
+
+const scoreCardTitle = document.createElement("h1");
+scoreCardTitle.textContent = "ScoreCard";
+scoreCard.appendChild(scoreCardTitle);
+
+const scoreList = document.createElement("ul")
+scoreCard.appendChild(scoreList);
+
+const humanItem = document.createElement("li");
+const computerItem = document.createElement("li");
+scoreList.appendChild(humanItem);
+scoreList.appendChild(computerItem);
+
+const humanDetails = document.createElement("span");
+humanDetails.textContent = `Human Score: ${humanScore}`;
+
+const computerDetails = document.createElement("span");
+computerDetails.textContent = `Computer Score ${computerScore}`
+
+
+humanItem.appendChild(humanDetails);
+computerItem.appendChild(computerDetails);
 
