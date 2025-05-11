@@ -1,24 +1,22 @@
 
 const scissors = document.querySelector("#scissors");
 scissors.addEventListener("click", () => {
-    //alert("scissor test");
-    getHumanChoice("SCISSORS");
-    getComputerChoice();
+    
+    playRound("SCISSORS", getComputerChoice);
+    
+    
 });
 
 const paper = document.querySelector("#paper");
 paper.addEventListener("click", () => {
     //alert("paper test");
-    getHumanChoice("PAPER");
-    getComputerChoice();
-})
+    playRound("PAPER", getComputerChoice);
+});
 
 const rock = document.querySelector("#rock");
 rock.addEventListener("click", () => {
-    //alert("rock test");
-    getHumanChoice("ROCK");
-    getComputerChoice();
-} )
+    playRound("ROCK", getComputerChoice);
+});
 
 /* ---------------STEP 1-----------------
    -------Create a computer that--------- 
@@ -28,20 +26,25 @@ rock.addEventListener("click", () => {
 function getComputerChoice() {
 
 // ADD a variable that accepts 3 random numbers
-let num = Math.floor(Math.random() * 3);
+    let num = Math.floor(Math.random() * 3);
+    if (num === 1) {
+        console.log("Computer returns SCISSORS");
+        return "SCISSORS";
+    }
+    else if (num === 2) {
+        console.log("Computer returns ROCK");
+        return "ROCK";
+    }
+    else if (num === 0) {
+        console.log("Computer returns PAPER");
+        return "PAPER";
+    }
+    else {
+        console.log("Error");
+    }
 
 // ASSIGN string values to the numbers
-if (num === 1) {
-    alert("Computer has chosen SCISSORS");
-    return "SCISSORS";
-}
-else if (num === 2) {
-    alert("Computer has chosen PAPER");
-    return "PAPER";
-} else {
-    alert("Computer has chosen ROCK");
-    return "ROCK";
-}
+
 
 }
 
@@ -51,18 +54,8 @@ else if (num === 2) {
 
 // CREATE function 
 function getHumanChoice(choice) {
-
-// CREATE a variable that accepts external input
-//let choice = prompt("ROCK, PAPER, or SCISSORS");
-
-// CREATE a method that makes all characters uppercase
-let result = choice.toUpperCase();
-if (choice === "SCISSORS" || choice === "PAPER" || choice === "ROCK") {
-    alert(`Human has chosen ${choice}`);
-}
-
-// RETURN the results
-return result;
+    console.log(`Human returns ${choice}`)
+    return choice;
 }
 
 /* ------------STEP 3-------------
@@ -78,8 +71,12 @@ let computerScore = 0;
    -------a single round---------- */
 
 // CREATE a function with 2 parameters
-function playRound(humanChoice, computerChoice) {
-    
+//let humanSelection = getHumanChoice;
+
+
+function playRound(choice, computerChoice) {
+    let computerSelection = getComputerChoice();
+    let humanSelection = getHumanChoice(choice);
 // CREATE comparisons between choices to determine a winner
     if ((computerSelection === "SCISSORS" && humanSelection === "PAPER") || 
         (computerSelection === "PAPER" && humanSelection === "ROCK") || 
@@ -87,8 +84,10 @@ function playRound(humanChoice, computerChoice) {
         
             // ADD score to winner
             computerScore++;
+            
 
             // RETURN win or lose message
+            console.log("Computer Wins!")
             return "You Lose!";
 
         // Repeat process for the other scenarios
@@ -97,21 +96,25 @@ function playRound(humanChoice, computerChoice) {
              (humanSelection === "PAPER" && computerSelection === "ROCK") ||
              (humanSelection === "ROCK" && computerSelection === "SCISSORS")) {
                 
-        humanScore++;    
+        humanScore++; 
+        
+              
+        console.log("Human Wins!");
         return "You Win!";
     }
-    else if (humanSelection === computerSelection) {
-                
+    else if ((humanSelection === "SCISSORS" && computerSelection === "SCISSORS") ||
+             (humanSelection === "ROCK" && computerSelection === "ROCK") ||
+             (humanSelection === "PAPER" && computerSelection === "PAPER")) {
+        console.log("It's a draw!");        
         return "Its a draw!";
     }
     else {
-        return "Error";
+        console.log("Error");
     }
 }
 
 // CREATE variables that store the players choice functions
-let humanSelection = getHumanChoice;
-let computerSelection = getComputerChoice;
+
 
 /* -----------STEP 5----------- 
    -----Logic to play the------
@@ -153,22 +156,20 @@ function playGame() {
     } else {
         return "ERROR";
     }
-}
+} */
 
 // CREATE reset function:
 // This function resets the variables stored
 // in the players selection so we can achieve 
 // different outcomes each round.
-function resetChoice() {
-    delete humanSelection;
-    humanSelection = getHumanChoice();
-    delete computerSelection;
-    computerSelection = getComputerChoice();
-}
+//function resetChoice() {
+    //delete computerSelection;
+    //computerSelection = getComputerChoice();
+//}
 
 // CREATE function for final round which breaks the
 // loop, and allows the game to end as desired
-function finalRound() {
+/* function finalRound() {
     let lastRound = 5;
     humanSelection;
     computerSelection;
