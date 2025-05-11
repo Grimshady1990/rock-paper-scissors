@@ -1,4 +1,25 @@
 
+const scissors = document.querySelector("#scissors");
+scissors.addEventListener("click", () => {
+    //alert("scissor test");
+    getHumanChoice("SCISSORS");
+    getComputerChoice();
+});
+
+const paper = document.querySelector("#paper");
+paper.addEventListener("click", () => {
+    //alert("paper test");
+    getHumanChoice("PAPER");
+    getComputerChoice();
+})
+
+const rock = document.querySelector("#rock");
+rock.addEventListener("click", () => {
+    //alert("rock test");
+    getHumanChoice("ROCK");
+    getComputerChoice();
+} )
+
 /* ---------------STEP 1-----------------
    -------Create a computer that--------- 
    ---------can play the game------------ */
@@ -11,11 +32,14 @@ let num = Math.floor(Math.random() * 3);
 
 // ASSIGN string values to the numbers
 if (num === 1) {
+    alert("Computer has chosen SCISSORS");
     return "SCISSORS";
 }
 else if (num === 2) {
+    alert("Computer has chosen PAPER");
     return "PAPER";
 } else {
+    alert("Computer has chosen ROCK");
     return "ROCK";
 }
 
@@ -26,13 +50,16 @@ else if (num === 2) {
    -------a human user------------ */
 
 // CREATE function 
-function getHumanChoice() {
+function getHumanChoice(choice) {
 
 // CREATE a variable that accepts external input
-let choice = prompt("ROCK, PAPER, or SCISSORS");
+//let choice = prompt("ROCK, PAPER, or SCISSORS");
 
 // CREATE a method that makes all characters uppercase
 let result = choice.toUpperCase();
+if (choice === "SCISSORS" || choice === "PAPER" || choice === "ROCK") {
+    alert(`Human has chosen ${choice}`);
+}
 
 // RETURN the results
 return result;
@@ -83,8 +110,8 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // CREATE variables that store the players choice functions
-//let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice();
+let humanSelection = getHumanChoice;
+let computerSelection = getComputerChoice;
 
 /* -----------STEP 5----------- 
    -----Logic to play the------
